@@ -2,8 +2,8 @@
 library(EBImage)
 library(keras)
 
-#setting wd
-setwd("C:\\Users\\svenn\\Documents\\ML\\images\\")
+#setting wd -- ENTER YOUR WD HERE!
+setwd("")
 
 #reading files
 pictures <- c("c1.jpg", "c2.jpg", "c3.jpg", "c4.jpg", "c5.jpg", "c6.jpg", "c7.jpg", "c8.jpg", "c9.jpg", "c10.jpg",
@@ -94,8 +94,8 @@ model %>%
 history <- model %>%
   fit(trainx,
       trainLabels,
-      epochs = 100,
-      batch_size =72,
+      epochs = 50,
+      batch_size =32,
       validation_split = 0.2)
 
 plot(history)
